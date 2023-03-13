@@ -7,8 +7,7 @@ public class PlayerController : MonoBehaviour
     float horizontal;
     float vertical;
     float moveLimiter = 0.7f;
-    public ProjectileBehaviour ProjectilePrefab;
-    public Transform LaunchOffset;
+
 
 
     public float runSpeed = 20.0f;
@@ -24,10 +23,6 @@ public class PlayerController : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
         vertical = Input.GetAxisRaw("Vertical"); // -1 is down
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
-        }
     }
 
 
