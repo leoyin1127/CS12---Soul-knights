@@ -2,19 +2,44 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5f; // Adjust this to change the movement speed
+    Rigidbody2D body;
 
-    // Update is called once per frame
+    float horizontal;
+    float vertical;
+    float moveLimiter = 0.7f;
+    public ProjectileBehaviour ProjectilePrefab;
+    public Transform LaunchOffset;
+
+
+    public float runSpeed = 20.0f;
+
+    void Start()
+    {
+        body = GetComponent<Rigidbody2D>();
+    }
+
     void Update()
     {
-        // Get the horizontal and vertical input from the keyboard
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        // Gives a value between -1 and 1
+        horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
+        vertical = Input.GetAxisRaw("Vertical"); // -1 is down
 
-        // Create a new Vector2 with the input values and multiply it by the speed
-        Vector2 movement = new Vector2(horizontalInput, verticalInput) * speed;
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
+        }
+    }
 
-        // Move the player by adding the movement vector to its position
-        transform.position += new Vector3(movement.x, movement.y, 0f);
+
+    void FixedUpdate()
+    {
+        if (horizontal != 0 && vertical != 0) // Check for diagonal movement
+        {
+            // limit movement speed diagonally, so you move at 70% speed
+            horizontal *= moveLimiter;
+            vertical *= moveLimiter;
+        }
+
+        body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
     }
 }
