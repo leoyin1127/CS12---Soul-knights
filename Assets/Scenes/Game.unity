@@ -28500,7 +28500,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.9976063
+  orthographic size: 3.8795774
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -28884,6 +28884,9 @@ GameObject:
   - component: {fileID: 1208051981}
   - component: {fileID: 1208051982}
   - component: {fileID: 1208051983}
+  - component: {fileID: 1208051986}
+  - component: {fileID: 1208051985}
+  - component: {fileID: 1208051984}
   m_Layer: 0
   m_Name: Obstacles
   m_TagString: Untagged
@@ -29388,6 +29391,43 @@ CompositeCollider2D:
       - {x: 22.000029, y: -62.99254}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &1208051984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208051977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c70dd88c90c4636910db9725fdd4c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1208051985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208051977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e0f7f1733124c7bab486294f9ed881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tilemap: {fileID: 1208051980}
+--- !u!114 &1208051986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208051977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b186b62ccd7541a5a7c5cf3cad8897a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1652143408
 GameObject:
   m_ObjectHideFlags: 0

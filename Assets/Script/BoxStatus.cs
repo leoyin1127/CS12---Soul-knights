@@ -12,7 +12,7 @@ public class BoxStatus: MonoBehaviour
     //to specific groups in a data source
     public Vector3 WorldLocation { get; set; }
 
-    //represent the type of tile
+    //represent the type of tile in tilemap
     public TileBase TileBase { get; set; }
 
     //a Tilemap object that represents the Tilemap that

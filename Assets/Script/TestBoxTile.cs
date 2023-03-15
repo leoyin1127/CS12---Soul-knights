@@ -26,7 +26,7 @@ public class TestBoxTile : MonoBehaviour
             }
             else
             {
-                Debug.LogError("Key was not found");
+                Debug.LogError("Box was not found");
             }
 
         }
