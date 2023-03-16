@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class weaponScript : MonoBehaviour
+public class WeaponScript : MonoBehaviour
 {
     public int TotalWeapons = 1;
     public int CurrentWeaponIndex;
