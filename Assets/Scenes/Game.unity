@@ -28754,7 +28754,8 @@ MonoBehaviour:
   BulletSpeed: 1200
   FireRate: 0
   ReadyForNextShot: 0
-  ShootPoint: {fileID: 0}
+  ShootPoint: {fileID: 675366507}
+  bulletPos: {x: 0, y: 0, z: 0}
 --- !u!114 &658124887
 MonoBehaviour:
   m_ObjectHideFlags: 0
