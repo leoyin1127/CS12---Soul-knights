@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponScript : MonoBehaviour
 {
-    public int TotalWeapons = 1;
+    public int TotalWeapons = 3;
     public int CurrentWeaponIndex;
     
     public GameObject[] Guns;

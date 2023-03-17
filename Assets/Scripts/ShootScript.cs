@@ -10,7 +10,7 @@ public class ShootScript : MonoBehaviour
     public float FireRate;
     public float ReadyForNextShot;
     public Transform ShootPoint;
-    Vector2 direction;
+    Vector2 Direction;
 
 
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class ShootScript : MonoBehaviour
     void Update()
     {
         Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        direction = mousepos - (Vector2)Gun.position;
+        Direction = mousepos - (Vector2)Gun.position;
         FaceMouse();
 
         if (Input.GetMouseButton(0))
@@ -45,6 +45,6 @@ public class ShootScript : MonoBehaviour
 
     void FaceMouse()
     {
-        Gun.transform.right = direction;
+        Gun.transform.right = Direction;
     }
 }
