@@ -28874,12 +28874,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6080083a5d5cd0a4bbba71ee4ee04491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 658124879}
-  velocity: 5
-  health: 0
-  attack: 0
-  vision: 5
-  range: 0
+  Player: {fileID: 658124879}
+  Velocity: 1
+  Health: 1
+  Attack: 0
+  Vision: 0
 --- !u!50 &675366509
 Rigidbody2D:
   serializedVersion: 4
@@ -28929,7 +28928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432549fe8cc653949801202ae85a20ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  Health: 1
 --- !u!114 &675366512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28942,7 +28941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2b109ffc2182d4288eeaac6aebd66d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  Damage: 1
   playerStats: {fileID: 658124887}
 --- !u!1 &1208051977
 GameObject:

@@ -8,8 +8,6 @@ public class PlayerController : MonoBehaviour
     float vertical;
     float moveLimiter = 0.7f;
 
-
-
     public float runSpeed = 20.0f;
 
     void Start()
