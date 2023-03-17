@@ -10,7 +10,10 @@ public class ShootScript : MonoBehaviour
     public float FireRate;
     public float ReadyForNextShot;
     public Transform ShootPoint;
-    Vector2 Direction;
+    public Vector3 bulletPos;
+    Vector2 direction;
+
+    private GameObject bulletIns;
 
 
     // Start is called before the first frame update
@@ -22,8 +25,9 @@ public class ShootScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Direction = mousepos - (Vector2)Gun.position;
+        direction = mousepos - (Vector2)Gun.position;
         FaceMouse();
 
         if (Input.GetMouseButton(0))
@@ -34,17 +38,26 @@ public class ShootScript : MonoBehaviour
                 Shoot();
             }
         }
+
+        if (bulletIns != null)
+        {
+            Vector3 bulletPos = bulletIns.transform.position;
+            Debug.Log(System.String.Format("bulletPos: {0},{1},{2}", bulletPos.x, bulletPos.y, bulletPos.z));
+        }
     }
 
     void Shoot()
     {
-        GameObject BulletIns = Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
-        BulletIns.GetComponent<Rigidbody2D>().AddForce(BulletIns.transform.right * BulletSpeed);
-        Destroy(BulletIns, 3);
+        bulletIns = Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
+        bulletIns.GetComponent<Rigidbody2D>().AddForce(bulletIns.transform.right * BulletSpeed);
+        Destroy(bulletIns, 3);
     }
+
 
     void FaceMouse()
     {
-        Gun.transform.right = Direction;
+        Gun.transform.right = direction;
     }
+
+   
 }

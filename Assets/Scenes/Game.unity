@@ -28610,6 +28610,7 @@ GameObject:
   - component: {fileID: 658124883}
   - component: {fileID: 658124884}
   - component: {fileID: 658124885}
+  - component: {fileID: 658124886}
   - component: {fileID: 658124887}
   m_Layer: 0
   m_Name: Player
@@ -28736,6 +28737,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 15
+--- !u!114 &658124886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658124879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b23d2d12de68eb45ac80f68259511bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gun: {fileID: 2480108}
+  Bullet: {fileID: 3784971482350917875, guid: 793a163c277359c478d075628d080dca, type: 3}
+  BulletSpeed: 1200
+  FireRate: 0
+  ReadyForNextShot: 0
+  ShootPoint: {fileID: 675366507}
+  bulletPos: {x: 0, y: 0, z: 0}
 --- !u!114 &658124887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29452,7 +29472,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208051977}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44c70dd88c90c4636910db9725fdd4c7, type: 3}
   m_Name: 
@@ -29557,10 +29577,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 658124882}
     m_Modifications:
-    - target: {fileID: 6578258907417447346, guid: 2e51bbafa0c1e8f4d8fa10cd10cb8749, type: 3}
-      propertyPath: TotalWeapons
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7084910514084085626, guid: 2e51bbafa0c1e8f4d8fa10cd10cb8749, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -29604,14 +29620,6 @@ PrefabInstance:
     - target: {fileID: 7084910514084085626, guid: 2e51bbafa0c1e8f4d8fa10cd10cb8749, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7084910514289115736, guid: 2e51bbafa0c1e8f4d8fa10cd10cb8749, type: 3}
-      propertyPath: FireRate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7084910514289115736, guid: 2e51bbafa0c1e8f4d8fa10cd10cb8749, type: 3}
-      propertyPath: BulletSpeed
-      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 9133413359344553375, guid: 2e51bbafa0c1e8f4d8fa10cd10cb8749, type: 3}
       propertyPath: m_Name
