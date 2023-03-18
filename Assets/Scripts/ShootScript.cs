@@ -10,10 +10,11 @@ public class ShootScript : MonoBehaviour
     public float FireRate;
     public float ReadyForNextShot;
     public Transform ShootPoint;
-    public Vector3 bulletPos;
-    Vector2 direction;
+    public List<Vector3> bulletPositions = new List<Vector3>();
 
     private GameObject bulletIns;
+    Vector2 direction;
+
 
 
     // Start is called before the first frame update
@@ -41,9 +42,15 @@ public class ShootScript : MonoBehaviour
 
         if (bulletIns != null)
         {
-            Vector3 bulletPos = bulletIns.transform.position;
-            Debug.Log(System.String.Format("bulletPos: {0},{1},{2}", bulletPos.x, bulletPos.y, bulletPos.z));
+            print("not null.adding..");
+            bulletPositions.Add(bulletIns.transform.position);
+            //print(bulletPositions.Count);
+            //print("haa");
+            //Debug.Log(System.String.Format("bulletPos: {0},{1},{2}", bulletPos.x, bulletPos.y, bulletPos.z));
         }
+        // Remove the position of any destroyed bullets from the list
+        //bulletPositions.RemoveAll(bulletPos => bulletPos == Vector3.zero);
+
     }
 
     void Shoot()
@@ -51,6 +58,7 @@ public class ShootScript : MonoBehaviour
         bulletIns = Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
         bulletIns.GetComponent<Rigidbody2D>().AddForce(bulletIns.transform.right * BulletSpeed);
         Destroy(bulletIns, 3);
+        
     }
 
 
