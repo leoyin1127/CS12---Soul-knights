@@ -31,6 +31,7 @@ public class PlayerStats : MonoBehaviour
             TakeDamage(1);
             
         }
+        //test
         if (Input.GetKeyDown(KeyCode.H))
         {
             UseMana(20);
