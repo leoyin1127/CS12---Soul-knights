@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShootScript : MonoBehaviour
 {
-    public Transform Gun; // add a public Transform field for the Gun object
+    public Transform Gun;
     public GameObject Bullet;
     public float BulletSpeed;
     public float FireRate;
