@@ -42,15 +42,9 @@ public class ShootScript : MonoBehaviour
 
         if (bulletIns != null)
         {
-            print("not null.adding..");
             bulletPositions.Add(bulletIns.transform.position);
-            //print(bulletPositions.Count);
-            //print("haa");
-            //Debug.Log(System.String.Format("bulletPos: {0},{1},{2}", bulletPos.x, bulletPos.y, bulletPos.z));
+            
         }
-        // Remove the position of any destroyed bullets from the list
-        //bulletPositions.RemoveAll(bulletPos => bulletPos == Vector3.zero);
-
     }
 
     void Shoot()
