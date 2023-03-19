@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour
     public void Update()
     {
         Vector3 bulletPos = gameObject.transform.position;
-        Debug.Log(System.String.Format("bulletPos: {0},{1},{2}",bulletPos.x, bulletPos.y, bulletPos.z));
+        //Debug.Log(System.String.Format("bulletPos: {0},{1},{2}",bulletPos.x, bulletPos.y, bulletPos.z));
     }
 
 }

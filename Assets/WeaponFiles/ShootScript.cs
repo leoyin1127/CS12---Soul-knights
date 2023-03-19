@@ -43,7 +43,8 @@ public class ShootScript : MonoBehaviour
         if (bulletIns != null)
         {
             bulletPositions.Add(bulletIns.transform.position);
-            
+
+
         }
     }
 
@@ -51,10 +52,19 @@ public class ShootScript : MonoBehaviour
     {
         bulletIns = Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
         bulletIns.GetComponent<Rigidbody2D>().AddForce(bulletIns.transform.right * BulletSpeed);
-        Destroy(bulletIns, 3);
-        
+      
+        Destroy(bulletIns, 1);
+
     }
 
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.gameObject != gameObject) // check if the collider is not attached to the same object as the script
+    //    {
+    //        Destroy(bulletIns); // destroy the bullet instance
+    //        Debug.Log("Collision detected with " + other.gameObject.name);
+    //    }
+    //}
 
     void FaceMouse()
     {
